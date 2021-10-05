@@ -1,0 +1,370 @@
+[
+
+  {
+    "user": "u1",
+    "constraint": "node",
+    "node-type": "http://stardog.com/tutorial/Band"
+  },
+
+  {
+    "user": "u1",
+    "constraint": "node",
+    "node-type": "http://stardog.com/tutorial/SoloArtist",
+    "nodes": [
+      "http://stardog.com/tutorial/George_Harrison",
+      "http://stardog.com/tutorial/John_Lennon",
+      "http://stardog.com/tutorial/Paul_McCartney",
+      "http://stardog.com/tutorial/Ringo_Starr"
+    ]
+  },
+
+  {
+    "user": "u2",
+    "constraint": "node",
+    "node-type": "http://stardog.com/tutorial/SoloArtist"
+  },
+
+  {
+    "user": "u2",
+    "constraint": "node",
+    "node-type": "http://stardog.com/tutorial/Songwriter",
+    "nodes": [
+      "http://stardog.com/tutorial/George_Harrison",
+      "http://stardog.com/tutorial/John_Lennon",
+      "http://stardog.com/tutorial/Paul_McCartney",
+      "http://stardog.com/tutorial/Ringo_Starr"
+    ]
+  },
+
+  {
+    "user": "u3",
+    "constraint": "node",
+    "node-type": "http://stardog.com/tutorial/Album"
+  },
+
+  {
+    "user": "u4",
+    "constraint": "node",
+    "node-type": "http://stardog.com/tutorial/Song"
+  },
+
+
+
+
+
+  {
+    "user": "u1",
+    "constraint": "predicate",
+    "subject-type": "http://stardog.com/tutorial/Band",
+    "predicate":  "http://stardog.com/tutorial/member",
+    "object-type": "http://stardog.com/tutorial/SoloArtist"
+  },
+
+  {
+    "user": "u2",
+    "constraint": "predicate",
+    "subject-type": "http://stardog.com/tutorial/Band",
+    "predicate":  "http://stardog.com/tutorial/member",
+    "object-type": "http://stardog.com/tutorial/SoloArtist",
+    "objects": [
+      "http://stardog.com/tutorial/George_Harrison",
+      "http://stardog.com/tutorial/Ringo_Starr"
+    ]
+  },
+
+  {
+    "user": "u3",
+    "constraint": "predicate",
+    "subject-type": "http://stardog.com/tutorial/Band",
+    "subjects": [
+      "http://stardog.com/tutorial/Queen_(band)",
+      "http://stardog.com/tutorial/The_Beatles",
+      "http://stardog.com/tutorial/The_Rolling_Stones"
+    ],
+    "predicate":  "http://stardog.com/tutorial/member",
+    "object-type": "http://stardog.com/tutorial/SoloArtist"
+  },
+
+  {
+    "user": "u4",
+    "constraint": "predicate",
+    "subject-type": "http://stardog.com/tutorial/Band",
+    "subjects": ["http://stardog.com/tutorial/The_Beatles"],
+    "predicate":  "http://stardog.com/tutorial/member",
+    "object-type": "http://stardog.com/tutorial/SoloArtist",
+    "objects": [
+      "http://stardog.com/tutorial/John_Lennon",
+      "http://stardog.com/tutorial/Paul_McCartney"
+    ]
+  },
+
+
+
+
+
+  {
+    "user": "u5",
+    "constraint": "attribute",
+    "subject-type": "http://stardog.com/tutorial/Song",
+    "predicate": "http://stardog.com/tutorial/length",
+    "symbol": "X"
+  },
+
+  {
+    "user": "u6",
+    "constraint": "attribute",
+    "subject-type": "http://stardog.com/tutorial/Song",
+    "subjects": [
+      "http://stardog.com/tutorial/Here_Comes_the_Sun",
+      "http://stardog.com/tutorial/Let_It_Be_(song)",
+      "http://stardog.com/tutorial/Yellow_Submarine_(song)",
+      "http://stardog.com/tutorial/Yesterday_(Beatles_song)"
+    ],
+    "predicate": "http://stardog.com/tutorial/length",
+    "symbol": "X"
+  },
+
+  {
+    "user": "u7",
+    "constraint": "attribute",
+    "subject-type": "http://stardog.com/tutorial/Song",
+    "predicate": "http://stardog.com/tutorial/length",
+    "object-type": "integer",
+    "symbol": "=",
+    "values": ["350"]
+  },
+
+  {
+    "user": "u8",
+    "constraint": "attribute",
+    "subject-type": "http://stardog.com/tutorial/Song",
+    "predicate": "http://stardog.com/tutorial/length",
+    "object-type": "integer",
+    "symbol": "!=",
+    "values": ["200"]
+  },
+
+  {
+    "user": "u9",
+    "constraint": "attribute",
+    "subject-type": "http://stardog.com/tutorial/Song",
+    "predicate": "http://stardog.com/tutorial/length",
+    "object-type": "integer",
+    "symbol": ">",
+    "values": ["400"]
+  },
+
+  {
+    "user": "u10",
+    "constraint": "attribute",
+    "subject-type": "http://stardog.com/tutorial/Song",
+    "predicate": "http://stardog.com/tutorial/length",
+    "object-type": "integer",
+    "symbol": ">=",
+    "values": ["200"]
+  },
+
+  {
+    "user": "u11",
+    "constraint": "attribute",
+    "subject-type": "http://stardog.com/tutorial/Song",
+    "predicate": "http://stardog.com/tutorial/length",
+    "object-type": "integer",
+    "symbol": "<",
+    "values": ["400"]
+  },
+
+  {
+    "user": "u12",
+    "constraint": "attribute",
+    "subject-type": "http://stardog.com/tutorial/Song",
+    "predicate": "http://stardog.com/tutorial/length",
+    "object-type": "integer",
+    "symbol": "<=",
+    "values": ["200"]
+  },
+
+  {
+    "user": "u13",
+    "constraint": "attribute",
+    "subject-type": "http://stardog.com/tutorial/Song",
+    "predicate": "http://stardog.com/tutorial/length",
+    "object-type": "integer",
+    "symbol": "between",
+    "values": [
+      "200",
+      "300"
+    ]
+  },
+
+  {
+    "user": "u14",
+    "constraint": "attribute",
+    "subject-type": "http://stardog.com/tutorial/Song",
+    "predicate": "http://stardog.com/tutorial/length",
+    "object-type": "integer",
+    "symbol": "in",
+    "values": [
+      "100",
+      "150",
+      "200",
+      "250",
+      "300",
+      "350"
+    ]
+  },
+
+  {
+    "user": "u15",
+    "constraint": "attribute",
+    "subject-type": "http://stardog.com/tutorial/Song",
+    "predicate": "http://stardog.com/tutorial/length",
+    "object-type": "integer",
+    "symbol": "notin",
+    "values": ["200", "250", "300", "350"]
+  },
+
+
+  {
+    "user": "u5",
+    "constraint": "attribute",
+    "subject-type": "http://stardog.com/tutorial/Album",
+    "predicate": "http://stardog.com/tutorial/date",
+    "symbol": "X"
+  },
+
+  {
+    "user": "u6",
+    "constraint": "attribute",
+    "subject-type": "http://stardog.com/tutorial/Album",
+    "subjects": [
+      "http://stardog.com/tutorial/Abbey_Road",
+      "http://stardog.com/tutorial/Let_It_Be",
+      "http://stardog.com/tutorial/Please_Please_Me",
+      "http://stardog.com/tutorial/Yesterday_and_Today"
+    ],
+    "predicate": "http://stardog.com/tutorial/date",
+    "symbol": "X"
+  },
+
+  {
+    "user": "u7",
+    "constraint": "attribute",
+    "subject-type": "http://stardog.com/tutorial/Album",
+    "predicate": "http://stardog.com/tutorial/date",
+    "object-type": "date",
+    "symbol": "=",
+    "values": ["1999-07-27"]
+  },
+
+  {
+    "user": "u8",
+    "constraint": "attribute",
+    "subject-type": "http://stardog.com/tutorial/Album",
+    "predicate": "http://stardog.com/tutorial/date",
+    "object-type": "date",
+    "symbol": "!=",
+    "values": ["1999-07-27"]
+  },
+
+  {
+    "user": "u9",
+    "constraint": "attribute",
+    "subject-type": "http://stardog.com/tutorial/Album",
+    "predicate": "http://stardog.com/tutorial/date",
+    "object-type": "date",
+    "symbol": ">",
+    "values": ["1999-07-27"]
+  },
+
+  {
+    "user": "u10",
+    "constraint": "attribute",
+    "subject-type": "http://stardog.com/tutorial/Album",
+    "predicate": "http://stardog.com/tutorial/date",
+    "object-type": "date",
+    "symbol": ">=",
+    "values": ["1999-07-27"]
+  },
+
+  {
+    "user": "u11",
+    "constraint": "attribute",
+    "subject-type": "http://stardog.com/tutorial/Album",
+    "predicate": "http://stardog.com/tutorial/date",
+    "object-type": "date",
+    "symbol": "<",
+    "values": ["1999-07-27"]
+  },
+
+  {
+    "user": "u12",
+    "constraint": "attribute",
+    "subject-type": "http://stardog.com/tutorial/Album",
+    "predicate": "http://stardog.com/tutorial/date",
+    "object-type": "date",
+    "symbol": "<=",
+    "values": ["1999-07-27"]
+  },
+
+  {
+    "user": "u13",
+    "constraint": "attribute",
+    "subject-type": "http://stardog.com/tutorial/Album",
+    "predicate": "http://stardog.com/tutorial/date",
+    "object-type": "date",
+    "symbol": "between",
+    "values": [
+      "1990-01-01",
+      "1999-12-31"
+    ]
+  },
+
+  {
+    "user": "u14",
+    "constraint": "attribute",
+    "subject-type": "http://stardog.com/tutorial/Album",
+    "predicate": "http://stardog.com/tutorial/date",
+    "object-type": "date",
+    "symbol": "in",
+    "values": [
+      "1959-08-05",
+      "1962-01-28",
+      "1996-02-14",
+      "1999-07-27"
+    ]
+  },
+
+  {
+    "user": "u15",
+    "constraint": "attribute",
+    "subject-type": "http://stardog.com/tutorial/Album",
+    "predicate": "http://stardog.com/tutorial/date",
+    "object-type": "date",
+    "symbol": "notin",
+    "values": [
+      "1959-08-05",
+      "1962-01-28",
+      "1996-02-14",
+      "1999-07-27"
+    ]
+  },
+
+
+  {
+    "user": "u5",
+    "constraint": "attribute",
+    "subject-type": "http://stardog.com/tutorial/SoloArtist",
+    "predicate": "http://stardog.com/tutorial/name",
+    "symbol": "X"
+  },
+
+  {
+    "user": "u5",
+    "constraint": "attribute",
+    "subject-type": "http://stardog.com/tutorial/Album",
+    "predicate": "http://stardog.com/tutorial/name",
+    "symbol": "X"
+  }
+
+]
